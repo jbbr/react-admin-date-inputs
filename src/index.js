@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useInput, FieldTitle } from 'ra-core';
-import { DatePicker, TimePicker, DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { DatePicker, TimePicker, DateTimePicker, MuiPickersUtilsProvider, KeyboardTimePicker } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 
 const Picker = ({ PickerComponent, ...fieldProps }) => {
@@ -80,5 +80,8 @@ Picker.defaultProps = {
 };
 
 export const DateInput = props => <Picker PickerComponent={DatePicker} {...props} />
+export const KeyboardDateInput = props => <Picker PickerComponent={KeyboardDatePicker} {...props} />
 export const TimeInput = props => <Picker PickerComponent={TimePicker} {...props} />
+export const KeyboardTimeInput = props => <Picker PickerComponent={KeyboardTimePicker} {...props} />
 export const DateTimeInput = props => <Picker PickerComponent={DateTimePicker} {...props} />
+export const KeyboardDateTimeInput = props => <Picker PickerComponent={KeyboardDateTimePicker} {...props} />
